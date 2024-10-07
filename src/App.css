@@ -1,38 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(45, 55, 60);
+}
+
+body {
+  height: 100%;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='87' height='50.232' patternTransform='scale(2) rotate(95)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(226, 12.8%, 38.19%, 1)'/><path d='M0 54.424l14.5-8.373c4.813 2.767 9.705 5.573 14.5 8.37l14.5-8.373V29.303M0 4.193v16.744l-14.5 8.373L0 37.68l14.5-8.374V12.562l29-16.746m43.5 58.6l-14.5-8.37v-33.49c-4.795-2.797-9.687-5.603-14.5-8.37m43.5 25.111L87 37.67c-4.795-2.797-24.187-13.973-29-16.74l-14.5 8.373-14.5-8.37v-33.489m72.5 8.365L87 4.183l-14.5-8.37M87 4.183v16.745L58 37.673v16.744m0-66.976V4.185L43.5 12.56c-4.795-2.797-24.187-13.973-29-16.74L0 4.192l-14.5-8.37m29 33.484c4.813 2.767 9.705 5.573 14.5 8.37V54.42'  stroke-linecap='square' stroke-width='3' stroke='hsla(167, 39.8%, 81.8%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(-244,-160)' fill='url(%23a)'/></svg>");
 }
 
-.App-link {
-  color: #61dafb;
+.box {
+  
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+h1 {
+  background-color: gainsboro;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input {
+  height: 30px;
+  background-color: gainsboro;
+  width: 300px;
+  border: solid 0px;
+  padding: 10px;
+}
+
+button {
+  height: 50px;
+  width: 100%;
+  border: solid 0px;
+  background-color: gainsboro;
+  cursor: pointer;
+}
+
+.output {
+  background-color: gainsboro;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.qr-code {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.qr-code img {
+  max-width: 100%;
+  height: auto;
+}
+
+.error {
+  color: red;
+}
+
+@media only screen and (max-width: 430px) {
+  input {
+    width: 100%;
   }
 }
